@@ -1,0 +1,30 @@
+<div class="create-link">
+		<%= link_to "Create User", new_user_path %>
+</div>
+
+<% if !@users.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>Users List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Name</th><th>Email</th><th>Mobile</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @users.each do |user| %>
+												<tr>
+														<td><%= user.name %></td>
+														<td><%= user.email %></td>
+														<td><%= user.mobile %></td>	
+														<td><%= link_to "Edit", edit_user_path(user) %> | <%= link_to "Delete", user_path(user), :method => :delete, :confirm => "Are you sure want to delete user?" %></td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% end %>

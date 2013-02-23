@@ -1,0 +1,34 @@
+<div class="create-link">
+		<%= link_to "Create Corrective Action", new_corrective_action_path %>
+</div>
+<% if !@corrective_actions.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>Corrective Actions List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Problem#</th><th>Status</th><th>Responsible</th><th>Date Due</th><th>CAR description</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @corrective_actions.each do |corrective_action| %>
+												<tr>
+														<td><%= corrective_action.id %></td>
+														<td><%= corrective_action.status %></td>
+														<td><%= corrective_action.responsible_user && corrective_action.responsible_user.name %></td>
+														<td><%= corrective_action.due_date %></td>
+														<td><%= corrective_action.description %></td>
+														<td>
+																<%= link_to "Edit", edit_corrective_action_path(corrective_action) %> | 
+																<%= link_to "Delete", corrective_action_path(corrective_action), :method => :delete, :confirm => "Are you sure want to delete?" %>
+														</td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% end %>

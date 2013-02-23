@@ -1,0 +1,16 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.users_list {
+  width: 60%;
+}
+
+.users_list td {
+  border: 1px solid;
+}
+
+.error_container {
+  color: red;
+  width: auto;
+}

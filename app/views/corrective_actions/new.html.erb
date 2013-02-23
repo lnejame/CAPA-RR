@@ -1,0 +1,18 @@
+<div class="create-link">Create New Corrective Action</div>
+
+<div class="error_container">
+		<% @corrective_action.errors.messages.each_pair do |k,v| %>
+				<%= "#{k.capitalize} - #{v[0]}" %><br />
+		<% end %>
+</div>
+
+<div class="main-container">
+		<div class="widget-box">
+				<%= form_for @corrective_action, :html => {:class => "form-horizontal", :id => "form_validator"} do |f| %>
+						<%= render :partial => "form", :locals => {:f => f} %>
+						<div class="form-actions">
+								<%= f.submit 'Create', :class => "btn btn-primary" %>
+						</div>
+				<% end %>
+		</div>
+</div>

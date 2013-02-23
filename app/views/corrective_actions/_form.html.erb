@@ -1,0 +1,159 @@
+<div class="control-group">
+		<%= f.label :Group, "*Problem #Group:", :class => "control-label" %>
+		<div class="controls">				<%= f.collection_select(:group_id, @groups, :id, :name, {:include_blank => "-Select Group-"}, :class => "required")%>		</div>
+</div>
+<div class="control-group"><%= f.label :subject, "*Subject:" , :class => "control-label" %> 
+<div class="controls">
+<%= f.text_field :subject, :class => "required" %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :created_user_id, "*Created by:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:created_user_id, @users, :id, :name, {:include_blank => "-Select User-"}, :class => "required")%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :responsible_user_id, "Responsible:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:responsible_user_id, @users, :id, :name, {:include_blank => "-Select Responsible User-"})%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :due_date, "Date Due:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :due_date, :class => "datepicker", :value => formatted_date(f.object.due_date ? f.object.due_date : Date.today) %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :security_level, "Security Level:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :security_level %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :security_level, "Security Level:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :security_level %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :location, "Location Originated:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :location %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :part_id, "Part:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:part_id, @parts, :id, :name, {:include_blank => "-Select Part-"})%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :supplier_id, "Supplier:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:supplier_id, @suppliers, :id, :name, {:include_blank => "-Select Supplier-"})%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :customer_id, "Customer:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:customer_id, @users, :id, :name, {:include_blank => "-Select Customer-"})%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :category_id, "Category:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:category_id, @categories, :id, :name, {:include_blank => "-Select Category-"})%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :ca_type, "Type:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :ca_type %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :division, "Division:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :division %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :department, "Department:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :department %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :source, "Source:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :source %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :ca_class, "Class:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :ca_class %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :level, "Level:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :level %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :program_id, "Program:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:program_id, @programs, :id, :name, {:include_blank => "-Select Program-"})%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :sub_program_id, "Sub - Program:" , :class => "control-label" %>
+<div class="controls">
+<%= f.collection_select(:sub_program_id, @sub_programs, :id, :name, {:include_blank => "-Select SubProgram-"})%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :material_cost, "Material Cost:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :material_cost		%>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :labor_cost, "Labor Cost:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :labor_cost %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :total_cost, "Total Cost:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :total_cost %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :size, "Size:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :size %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :range, "Range:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :range %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :scope, "Scope:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_field :scope %>
+</div>
+</div>
+<div class="control-group">
+<%= f.label :description, "CAR Description:" , :class => "control-label" %>
+<div class="controls">
+<%= f.text_area :description, :rows => 4 %>
+</div>
+</div>
