@@ -36,3 +36,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# To construct forms using simple_form
+gem 'simple_form'

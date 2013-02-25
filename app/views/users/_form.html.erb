@@ -1,19 +1,6 @@
 
-<div class="control-group">
-		<%= f.label :name, :class => "control-label"  %>
-		<div class="controls">
-				<%= f.text_field :name, :class => "required" %>
-		</div>
-</div>
-<div class="control-group">
-		<%= f.label :email, :class => "control-label"  %>
-		<div class="controls">
-				<%= f.text_field :email, :class => "email required" %>
-		</div>
-</div>
-<div class="control-group">
-		<%= f.label :mobile, :class => "control-label"  %>
-		<div class="controls">
-				<%= f.text_field :mobile %>
-		</div>
-</div>
+<%= f.input :name, label_html: { class: 'control-label' } %>
+
+<%= f.input :email, label_html: { class: 'control-label' } %>
+
+<%= f.input :mobile, label_html: { class: 'control-label' }, required: false %>
