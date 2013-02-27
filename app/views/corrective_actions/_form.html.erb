@@ -1,159 +1,51 @@
-<div class="control-group">
-		<%= f.label :Group, "*Problem #Group:", :class => "control-label" %>
-		<div class="controls">				<%= f.collection_select(:group_id, @groups, :id, :name, {:include_blank => "-Select Group-"}, :class => "required")%>		</div>
-</div>
-<div class="control-group"><%= f.label :subject, "*Subject:" , :class => "control-label" %> 
-<div class="controls">
-<%= f.text_field :subject, :class => "required" %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :created_user_id, "*Created by:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:created_user_id, @users, :id, :name, {:include_blank => "-Select User-"}, :class => "required")%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :responsible_user_id, "Responsible:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:responsible_user_id, @users, :id, :name, {:include_blank => "-Select Responsible User-"})%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :due_date, "Date Due:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :due_date, :class => "datepicker", :value => formatted_date(f.object.due_date ? f.object.due_date : Date.today) %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :security_level, "Security Level:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :security_level %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :security_level, "Security Level:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :security_level %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :location, "Location Originated:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :location %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :part_id, "Part:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:part_id, @parts, :id, :name, {:include_blank => "-Select Part-"})%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :supplier_id, "Supplier:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:supplier_id, @suppliers, :id, :name, {:include_blank => "-Select Supplier-"})%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :customer_id, "Customer:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:customer_id, @users, :id, :name, {:include_blank => "-Select Customer-"})%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :category_id, "Category:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:category_id, @categories, :id, :name, {:include_blank => "-Select Category-"})%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :ca_type, "Type:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :ca_type %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :division, "Division:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :division %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :department, "Department:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :department %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :source, "Source:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :source %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :ca_class, "Class:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :ca_class %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :level, "Level:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :level %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :program_id, "Program:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:program_id, @programs, :id, :name, {:include_blank => "-Select Program-"})%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :sub_program_id, "Sub - Program:" , :class => "control-label" %>
-<div class="controls">
-<%= f.collection_select(:sub_program_id, @sub_programs, :id, :name, {:include_blank => "-Select SubProgram-"})%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :material_cost, "Material Cost:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :material_cost		%>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :labor_cost, "Labor Cost:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :labor_cost %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :total_cost, "Total Cost:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :total_cost %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :size, "Size:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :size %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :range, "Range:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :range %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :scope, "Scope:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_field :scope %>
-</div>
-</div>
-<div class="control-group">
-<%= f.label :description, "CAR Description:" , :class => "control-label" %>
-<div class="controls">
-<%= f.text_area :description, :rows => 4 %>
-</div>
-</div>
+<%=f.input :group_id, collection: @groups, label_method: :name, value_method: :id, prompt: "-Select Group-", required: true, label: "Problem#Group:" %>
+
+<%= f.input :subject, label_html: { class: 'control-label' }, label: "Subject:" %>
+
+<%=f.input :created_user_id, collection: @users, label_method: :name, value_method: :id, prompt: "-Select User-", required: true, label: "Created by:" %>
+
+<%=f.input :responsible_user_id, collection: @users, label_method: :name, value_method: :id, prompt: "-Select Responsible User-", label: "Responsible:" %>
+
+<%= f.input :due_date, as: :date_picker, input_html: { class: "datepicker", value: formatted_date(f.object.due_date ? f.object.due_date : Date.today) } %>
+
+<%= f.input :security_level, label_html: { class: 'control-label' }, label: "Security Level:", required: false %>
+
+<%= f.input :location, label_html: { class: 'control-label' }, label: "Location Originated:", required: false %>
+
+<%=f.input :part_id, collection: @parts, label_method: :name, value_method: :id, prompt: "-Select Part-", label: "Part:" %>
+
+<%=f.input :supplier_id, collection: @suppliers, label_method: :name, value_method: :id, prompt: "-Select Supplier-", label: "Supplier:" %>
+
+<%=f.input :customer_id, collection: @users, label_method: :name, value_method: :id, prompt: "-Select Customer-", label: "Customer:" %>
+
+<%=f.input :category_id, collection: @categories, label_method: :name, value_method: :id, prompt: "-Select Category-", label: "Category:" %>
+
+<%= f.input :ca_type, label_html: { class: 'control-label' }, label: "Type:", required: false %>
+
+<%= f.input :division, label_html: { class: 'control-label' }, label: "Division:", required: false %>
+
+<%= f.input :department, label_html: { class: 'control-label' }, label: "Department:", required: false %>
+
+<%= f.input :source, label_html: { class: 'control-label' }, label: "Source:", required: false %>
+
+<%= f.input :ca_class, label_html: { class: 'control-label' }, label: "Class:", required: false %>
+
+<%= f.input :level, label_html: { class: 'control-label' }, label: "Level:", required: false %>
+
+<%= f.input :program_id, collection: @programs, label_method: :name, value_method: :id, prompt: "-Select Program-", label: "Program:" %>
+
+<%= f.input :sub_program_id, collection: @sub_programs, label_method: :name, value_method: :id, prompt: "-Select SubProgram-", label: "SubProgram:" %>
+
+<%= f.input :material_cost, label_html: { class: 'control-label' }, label: "Material Cost:", required: false %>
+
+<%= f.input :labor_cost, label_html: { class: 'control-label' }, label: "Labor Cost:", required: false %>
+
+<%= f.input :total_cost, label_html: { class: 'control-label' }, label: "Total Cost:", required: false %>
+
+<%= f.input :size, label_html: { class: 'control-label' }, label: "Size:", required: false %>
+
+<%= f.input :range, label_html: { class: 'control-label' }, label: "Range:", required: false %>
+
+<%= f.input :scope, label_html: { class: 'control-label' }, label: "Scope:", required: false %>
+
+<%= f.input :description, as: :text, input_html: { rows: 4 }, label_html: { class: 'control-label' }, label: "CAR Description:", required: false %>
