@@ -6,7 +6,7 @@
 
 <%=f.input :responsible_user_id, collection: @users, label_method: :name, value_method: :id, prompt: "-Select Responsible User-", label: "Responsible:" %>
 
-<%= f.input :due_date, as: :date_picker, input_html: { class: "datepicker", value: formatted_date(f.object.due_date ? f.object.due_date : Date.today) } %>
+<%= f.input :due_date, as: :string, input_html: { class: "datepicker", value: formatted_date(f.object.due_date ? f.object.due_date : Date.today) } %>
 
 <%= f.input :security_level, label_html: { class: 'control-label' }, label: "Security Level:", required: false %>
 
