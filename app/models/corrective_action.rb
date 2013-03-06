@@ -8,6 +8,11 @@ class CorrectiveAction < ActiveRecord::Base
 		belongs_to :part
 		belongs_to :supplier
 		belongs_to :category
+		belongs_to :ca_class
+		belongs_to :ca_type
+		belongs_to :division
+		belongs_to :level
+		belongs_to :source
 		
 		#Validation
 		validates :subject, :presence => true

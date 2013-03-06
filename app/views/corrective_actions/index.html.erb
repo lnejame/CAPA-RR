@@ -19,7 +19,7 @@
 														<td><%= corrective_action.id %></td>
 														<td><%= corrective_action.status %></td>
 														<td><%= corrective_action.responsible_user && corrective_action.responsible_user.name %></td>
-														<td><%= corrective_action.due_date %></td>
+														<td><%= formatted_date(corrective_action.due_date) %></td>
 														<td><%= corrective_action.description %></td>
 														<td>
 																<%= link_to "Edit", edit_corrective_action_path(corrective_action) %> | 
@@ -31,4 +31,6 @@
 						</table>
 				</div>
 		</div>
+<% else %>
+		<h5>Corrective Actions not yet created.</h5>
 <% end %>

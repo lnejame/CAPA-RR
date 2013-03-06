@@ -1,4 +1,4 @@
-class Group < ActiveRecord::Base
+class Division < ActiveRecord::Base
 		# Associations
 		has_many :corrective_actions
 		

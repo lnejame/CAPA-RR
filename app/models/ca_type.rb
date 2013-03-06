@@ -1,4 +1,4 @@
-class Group < ActiveRecord::Base
+class CaType < ActiveRecord::Base
 		# Associations
 		has_many :corrective_actions
 		

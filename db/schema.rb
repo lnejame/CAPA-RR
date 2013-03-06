@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130222165054) do
+ActiveRecord::Schema.define(:version => 20130306015521) do
+
+  create_table "ca_classes", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "ca_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -31,16 +43,16 @@ ActiveRecord::Schema.define(:version => 20130222165054) do
     t.integer  "category_id"
     t.integer  "size"
     t.integer  "range"
+    t.integer  "ca_type_id"
+    t.integer  "division_id"
+    t.integer  "source_id"
+    t.integer  "ca_class_id"
+    t.integer  "level_id"
     t.datetime "due_date"
     t.string   "subject"
     t.string   "security_level"
     t.string   "location"
-    t.string   "ca_type"
-    t.string   "division"
     t.string   "department"
-    t.string   "source"
-    t.string   "ca_class"
-    t.string   "level"
     t.string   "scope"
     t.string   "status"
     t.float    "material_cost"
@@ -51,7 +63,19 @@ ActiveRecord::Schema.define(:version => 20130222165054) do
     t.datetime "updated_at",          :null => false
   end
 
+  create_table "divisions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "levels", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -64,6 +88,12 @@ ActiveRecord::Schema.define(:version => 20130222165054) do
   end
 
   create_table "programs", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sources", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

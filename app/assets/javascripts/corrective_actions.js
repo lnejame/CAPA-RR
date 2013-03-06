@@ -4,6 +4,6 @@
 $(document).ready(function(){	
 		//$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
 		$('.datepicker').datepicker(
-				{format: "mm/dd/yyyy"}
+				{format: "dd/mm/yyyy"}
 		);
 });

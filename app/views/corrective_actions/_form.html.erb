@@ -20,17 +20,17 @@
 
 <%=f.input :category_id, collection: @categories, label_method: :name, value_method: :id, prompt: "-Select Category-", label: "Category:" %>
 
-<%= f.input :ca_type, label_html: { class: 'control-label' }, label: "Type:", required: false %>
+<%=f.input :ca_type_id, collection: @ca_types, label_method: :name, value_method: :id, prompt: "-Select Type-", label: "Type:" %>
 
-<%= f.input :division, label_html: { class: 'control-label' }, label: "Division:", required: false %>
+<%=f.input :division_id, collection: @divisions, label_method: :name, value_method: :id, prompt: "-Select Division-", label: "Division:" %>
 
 <%= f.input :department, label_html: { class: 'control-label' }, label: "Department:", required: false %>
 
-<%= f.input :source, label_html: { class: 'control-label' }, label: "Source:", required: false %>
+<%=f.input :source_id, collection: @sources, label_method: :name, value_method: :id, prompt: "-Select Source-", label: "Source:" %>
 
-<%= f.input :ca_class, label_html: { class: 'control-label' }, label: "Class:", required: false %>
+<%=f.input :ca_class_id, collection: @ca_classes, label_method: :name, value_method: :id, prompt: "-Select Class-", label: "Class:" %>
 
-<%= f.input :level, label_html: { class: 'control-label' }, label: "Level:", required: false %>
+<%=f.input :level_id, collection: @levels, label_method: :name, value_method: :id, prompt: "-Select Level-", label: "Level:" %>
 
 <%= f.input :program_id, collection: @programs, label_method: :name, value_method: :id, prompt: "-Select Program-", label: "Program:" %>
 

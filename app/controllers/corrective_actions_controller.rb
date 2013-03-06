@@ -13,6 +13,11 @@ class CorrectiveActionsController < ApplicationController
 				@categories = Category.all
 				@programs = Program.all
 				@sub_programs = SubProgram.all
+				@levels = Level.all
+				@ca_classes = CaClass.all
+				@ca_types = CaType.all
+				@sources = Source.all
+				@divisions = Division.all
 		end
 		
 		def create
@@ -29,6 +34,11 @@ class CorrectiveActionsController < ApplicationController
 						@categories = Category.all
 						@programs = Program.all
 						@sub_programs = SubProgram.all
+						@levels = Level.all
+						@ca_classes = CaClass.all
+						@ca_types = CaType.all
+						@sources = Source.all
+						@divisions = Division.all
 						render 'new'						
 				end
 		end
@@ -41,6 +51,11 @@ class CorrectiveActionsController < ApplicationController
 				@categories = Category.all
 				@programs = Program.all
 				@sub_programs = SubProgram.all
+				@levels = Level.all
+				@ca_classes = CaClass.all
+				@ca_types = CaType.all
+				@sources = Source.all
+				@divisions = Division.all
 		end
 		
 		def update
