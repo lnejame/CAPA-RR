@@ -20,11 +20,11 @@ a:hover {
     height: 77px;
     position: relative;
     width: 100%;
-    z-index: -9;
+    /*z-index: -9;*/
 }
 
 #header h1 {
-    background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+    /*background: url("../img/logo.png") no-repeat scroll 0 0 transparent;*/
     height: 31px;
     left: 15px;
     line-height: 600px;
@@ -150,7 +150,7 @@ a:hover {
 }
 
 #sidebar > ul > li > a {
-	padding: 10px 0 10px 15px;
+	padding: 10px 0 10px 30px;
 	display: block;
 	color: #AAAAAA;
 }
@@ -160,7 +160,7 @@ a:hover {
 }
 
 #sidebar > ul > li.active > a {
-	background: url("../img/menu-active.png") no-repeat scroll right center transparent !important;
+	background: url("/assets/menu-active.png") no-repeat scroll right center transparent !important;
 }
 
 #sidebar > ul > li > a > .label {
@@ -201,8 +201,9 @@ a:hover {
     margin-right: 0;
     padding-bottom: 25px;
     position: relative;
-    min-height: 500px;
+    min-height: 450px;
     width: auto;
+    height: auto;
 
     border-top-left-radius: 8px;
 }
