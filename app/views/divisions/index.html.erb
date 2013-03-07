@@ -1,0 +1,28 @@
+<div class="create-link">
+		<%= link_to "Create Division", new_division_path %>
+</div>
+
+<% if !@divisions.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>Divisions List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Name</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @divisions.each do |division| %>
+												<tr>
+														<td><%= division.name %></td>
+														<td><%= link_to "Edit", edit_division_path(division) %> | <%= link_to "Delete", division_path(division), :method => :delete, :confirm => "Are you sure want to delete division?" %></td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% end %>

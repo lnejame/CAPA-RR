@@ -1,0 +1,28 @@
+<div class="create-link">
+		<%= link_to "Create Source", new_source_path %>
+</div>
+
+<% if !@sources.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>Sources List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Name</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @sources.each do |source| %>
+												<tr>
+														<td><%= source.name %></td>
+														<td><%= link_to "Edit", edit_source_path(source) %> | <%= link_to "Delete", source_path(source), :method => :delete, :confirm => "Are you sure want to delete source?" %></td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% end %>

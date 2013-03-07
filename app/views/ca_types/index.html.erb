@@ -1,0 +1,28 @@
+<div class="create-link">
+		<%= link_to "Create Type", new_ca_type_path %>
+</div>
+
+<% if !@ca_types.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>Types List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Name</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @ca_types.each do |ca_type| %>
+												<tr>
+														<td><%= ca_type.name %></td>
+														<td><%= link_to "Edit", edit_ca_type_path(ca_type) %> | <%= link_to "Delete", ca_type_path(ca_type), :method => :delete, :confirm => "Are you sure want to delete type?" %></td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% end %>

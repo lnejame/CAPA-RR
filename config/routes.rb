@@ -1,4 +1,13 @@
 Module7d::Application.routes.draw do
+  resources :groups
+  resources :categories
+  resources :ca_types
+  resources :divisions
+  resources :sources
+  resources :ca_classes
+  resources :levels
+  resources :programs
+  resources :sub_programs
   resources :users
   resources :corrective_actions
   root :to => 'home#index'

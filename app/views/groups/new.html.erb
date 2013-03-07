@@ -1,0 +1,17 @@
+<div class="create-link">Create New Problem Group</div>
+<div class="error_container">
+		<% @group.errors.messages.each_pair do |k,v| %>
+				<% "#{k.capitalize} - #{v[0]}" %><br />
+		<% end %>
+</div>
+
+<div class="main-container">
+		<div class="widget-box">
+				<%= simple_form_for(@group, :html => { :class => "form-horizontal", :id => "form_validator" }) do |f| %>
+						<%= render :partial => "form", :locals => {:f => f} %>
+						<div class="form-actions">
+								<%= f.submit 'Create', :class => "btn btn-primary" %>
+						</div>
+				<% end %>
+		</div>
+</div>
