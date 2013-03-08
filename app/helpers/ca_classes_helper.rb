@@ -1,0 +1,2 @@
+module CaClassesHelper
+end
