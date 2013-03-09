@@ -39,6 +39,7 @@ class CaClassesController < ApplicationController
 				redirect_to ca_classes_path
 		end
 		
+		private
 		def record_exists
 				if CaClass.exists?(params[:id])
 						@ca_class = CaClass.find(params[:id])

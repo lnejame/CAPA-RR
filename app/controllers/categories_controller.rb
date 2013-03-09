@@ -39,9 +39,11 @@ class CategoriesController < ApplicationController
 				redirect_to categories_path
 		end
 		
+		private
 		def record_exists
-				@category = Category.find(params[:id])
-				if @category.blank?
+				if Category.exists?(params[:id])
+						@category = Category.find(params[:id])
+				else
 						return redirect_to categories_path
 				end
 		end

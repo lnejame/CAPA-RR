@@ -1,0 +1,30 @@
+<div class="create-link">
+		<%= link_to "Create SubProgram", new_sub_program_path %>
+</div>
+
+<% if !@sub_programs.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>SubPrograms List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Name</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @sub_programs.each do |sub_program| %>
+												<tr>
+														<td><%= sub_program.name %></td>
+														<td><%= link_to "Edit", edit_sub_program_path(sub_program) %> | <%= link_to "Delete", sub_program_path(sub_program), :method => :delete, :confirm => "Are you sure want to delete sub_program?" %></td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% else %>
+		<h4>No SubPrograms added yet.</h4>
+<% end %>

@@ -39,9 +39,11 @@ class SourcesController < ApplicationController
 				redirect_to sources_path
 		end
 		
+		private
 		def record_exists
-				@source = Source.find(params[:id])
-				if @source.blank?
+				if Source.exists?(params[:id])
+						@source = Source.find(params[:id])
+				else
 						return redirect_to sources_path
 				end
 		end

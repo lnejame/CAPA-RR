@@ -39,9 +39,11 @@ class CaTypesController < ApplicationController
 				redirect_to ca_types_path
 		end
 		
+		private
 		def record_exists
-				@ca_type = CaType.find(params[:id])
-				if @ca_type.blank?
+				if CaType.exists?(params[:id])
+						@ca_type = CaType.find(params[:id])
+				else
 						return redirect_to ca_types_path
 				end
 		end

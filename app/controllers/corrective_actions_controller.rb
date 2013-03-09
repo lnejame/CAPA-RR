@@ -83,8 +83,9 @@ class CorrectiveActionsController < ApplicationController
 		
 		private
 		def record_exists
-				@corrective_action = CorrectiveAction.find(params[:id])
-				if @corrective_action.blank?
+				if CorrectiveAction.exists?(params[:id])
+						@corrective_action = CorrectiveAction.find(params[:id])
+				else
 						return redirect_to corrective_actions_path
 				end
 		end

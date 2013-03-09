@@ -39,9 +39,11 @@ class GroupsController < ApplicationController
 				redirect_to groups_path
 		end
 		
+		private
 		def record_exists
-				@group = Group.find(params[:id])
-				if @group.blank?
+				if Group.exists?(params[:id])
+						@group = Group.find(params[:id])
+				else
 						return redirect_to groups_path
 				end
 		end

@@ -39,9 +39,11 @@ class DivisionsController < ApplicationController
 				redirect_to divisions_path
 		end
 		
+		private
 		def record_exists
-				@division = Division.find(params[:id])
-				if @division.blank?
+				if Division.exists?(params[:id])
+						@division = Division.find(params[:id])
+				else
 						return redirect_to divisions_path
 				end
 		end

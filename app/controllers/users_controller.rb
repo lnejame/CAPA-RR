@@ -39,9 +39,11 @@ class UsersController < ApplicationController
 				redirect_to users_path
 		end
 		
+		private
 		def record_exists
-				@user = User.find(params[:id])
-				if @user.blank?
+				if User.exists?(params[:id])
+						@user = User.find(params[:id])
+				else
 						return redirect_to users_path
 				end
 		end

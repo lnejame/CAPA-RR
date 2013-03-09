@@ -1,0 +1,28 @@
+<div class="create-link">
+		<%= link_to "Create Level", new_level_path %>
+</div>
+
+<% if !@levels.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>Levels List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Name</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @levels.each do |level| %>
+												<tr>
+														<td><%= level.name %></td>
+														<td><%= link_to "Edit", edit_level_path(level) %> | <%= link_to "Delete", level_path(level), :method => :delete, :confirm => "Are you sure want to delete level?" %></td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% end %>
