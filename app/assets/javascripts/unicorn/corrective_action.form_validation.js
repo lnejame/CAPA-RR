@@ -17,6 +17,10 @@ $(document).ready(function(){
 						url:{
 								required:true,
 								url: true
+						},
+						phone:{
+								required:true,
+								number:true
 						}
 				},
 				errorClass: "help-inline",
@@ -29,5 +33,6 @@ $(document).ready(function(){
 						$(element).parents('.control-group').addClass('success');
 				}
 		});
+		
 
 });

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306015521) do
+ActiveRecord::Schema.define(:version => 20130310032221) do
 
   create_table "ca_classes", :force => true do |t|
     t.string   "name"
@@ -117,6 +117,13 @@ ActiveRecord::Schema.define(:version => 20130306015521) do
     t.string   "mobile"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "country"
+    t.string   "main_phone"
   end
 
 end

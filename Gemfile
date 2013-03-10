@@ -39,3 +39,6 @@ gem 'jquery-rails'
 
 # To construct forms using simple_form
 gem 'simple_form'
+
+# To populate country fields
+gem 'country_select'
