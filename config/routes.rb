@@ -1,4 +1,6 @@
 Module7d::Application.routes.draw do
+  resources :customer_subsystems, :controller => "customers"
+  resources :supplier_subsystems, :controller => "suppliers"
   resources :groups
   resources :categories
   resources :ca_types

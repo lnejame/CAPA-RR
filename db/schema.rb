@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130310032221) do
+ActiveRecord::Schema.define(:version => 20130312003042) do
 
   create_table "ca_classes", :force => true do |t|
     t.string   "name"
@@ -59,8 +59,23 @@ ActiveRecord::Schema.define(:version => 20130310032221) do
     t.float    "labor_cost"
     t.float    "total_cost"
     t.text     "description"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.integer  "customer_subsystem_id"
+    t.integer  "supplier_subsystem_id"
+  end
+
+  create_table "customer_subsystems", :force => true do |t|
+    t.string   "name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "country"
+    t.string   "main_phone"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "divisions", :force => true do |t|
@@ -101,6 +116,19 @@ ActiveRecord::Schema.define(:version => 20130310032221) do
 
   create_table "sub_programs", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "supplier_subsystems", :force => true do |t|
+    t.string   "name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "country"
+    t.string   "main_phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

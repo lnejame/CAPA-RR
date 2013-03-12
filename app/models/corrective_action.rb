@@ -6,13 +6,14 @@ class CorrectiveAction < ActiveRecord::Base
 		belongs_to :program
 		belongs_to :sub_program
 		belongs_to :part
-		belongs_to :supplier
 		belongs_to :category
 		belongs_to :ca_class
 		belongs_to :ca_type
 		belongs_to :division
 		belongs_to :level
 		belongs_to :source
+		belongs_to :customer_subsystem, :foreign_key => :customer_id
+		belongs_to :supplier_subsystem, :foreign_key => :supplier_id
 		
 		#Validation
 		validates :subject, :presence => true

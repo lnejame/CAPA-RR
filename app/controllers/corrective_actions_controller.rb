@@ -9,7 +9,6 @@ class CorrectiveActionsController < ApplicationController
 				@groups = Group.all
 				@users = User.all
 				@parts = Part.all
-				@suppliers = Supplier.all
 				@categories = Category.all
 				@programs = Program.all
 				@sub_programs = SubProgram.all
@@ -18,6 +17,8 @@ class CorrectiveActionsController < ApplicationController
 				@ca_types = CaType.all
 				@sources = Source.all
 				@divisions = Division.all
+				@customer_subsystems = CustomerSubsystem.all
+				@supplier_subsystems = SupplierSubsystem.all
 		end
 		
 		def create
@@ -30,7 +31,6 @@ class CorrectiveActionsController < ApplicationController
 						@groups = Group.all
 						@users = User.all
 						@parts = Part.all
-						@suppliers = Supplier.all
 						@categories = Category.all
 						@programs = Program.all
 						@sub_programs = SubProgram.all
@@ -39,6 +39,8 @@ class CorrectiveActionsController < ApplicationController
 						@ca_types = CaType.all
 						@sources = Source.all
 						@divisions = Division.all
+						@customer_subsystems = CustomerSubsystem.all
+						@supplier_subsystems = SupplierSubsystem.all
 						render 'new'						
 				end
 		end
@@ -47,7 +49,6 @@ class CorrectiveActionsController < ApplicationController
 				@groups = Group.all
 				@users = User.all
 				@parts = Part.all
-				@suppliers = Supplier.all
 				@categories = Category.all
 				@programs = Program.all
 				@sub_programs = SubProgram.all
@@ -56,6 +57,8 @@ class CorrectiveActionsController < ApplicationController
 				@ca_types = CaType.all
 				@sources = Source.all
 				@divisions = Division.all
+				@customer_subsystems = CustomerSubsystem.all
+				@supplier_subsystems = SupplierSubsystem.all
 		end
 		
 		def update
@@ -67,10 +70,16 @@ class CorrectiveActionsController < ApplicationController
 						@groups = Group.all
 						@users = User.all
 						@parts = Part.all
-						@suppliers = Supplier.all
 						@categories = Category.all
 						@programs = Program.all
 						@sub_programs = SubProgram.all
+						@levels = Level.all
+						@ca_classes = CaClass.all
+						@ca_types = CaType.all
+						@sources = Source.all
+						@divisions = Division.all
+						@customer_subsystems = CustomerSubsystem.all
+						@supplier_subsystems = SupplierSubsystem.all
 						render 'edit'
 				end
 		end

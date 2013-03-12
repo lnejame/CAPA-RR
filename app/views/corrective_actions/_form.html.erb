@@ -14,9 +14,9 @@
 
 <%=f.input :part_id, collection: @parts, label_method: :name, value_method: :id, prompt: "-Select Part-", label: "Part:" %>
 
-<%=f.input :supplier_id, collection: @suppliers, label_method: :name, value_method: :id, prompt: "-Select Supplier-", label: "Supplier:" %>
+<%=f.input :supplier_subsystem_id, collection: @supplier_subsystems, label_method: :name, value_method: :id, prompt: "-Select Supplier-", label: "Supplier:" %>
 
-<%=f.input :customer_id, collection: @users, label_method: :name, value_method: :id, prompt: "-Select Customer-", label: "Customer:" %>
+<%=f.input :customer_subsystem_id, collection: @customer_subsystems, label_method: :name, value_method: :id, prompt: "-Select Customer-", label: "Customer:" %>
 
 <%=f.input :category_id, collection: @categories, label_method: :name, value_method: :id, prompt: "-Select Category-", label: "Category:" %>
 

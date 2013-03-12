@@ -1,0 +1,28 @@
+<div class="create-link">
+		<%= link_to "Create SupplierSubsystem", new_supplier_subsystem_path %>
+</div>
+
+<% if !@supplier_subsystems.blank? %>
+		<div class="main-container widget-box">
+				<div class="widget-title">
+						<h5>SupplierSubsystems List</h5>
+				</div>
+				<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+								<thead>
+										<tr>
+												<th>Name</th><th>Actions</th>
+										</tr>
+								</thead>
+								<tbody>
+										<% @supplier_subsystems.each do |supplier_subsystem| %>
+												<tr>
+														<td><%= supplier_subsystem.name %></td>
+														<td><%= link_to "Edit", edit_supplier_subsystem_path(supplier_subsystem) %> | <%= link_to "Delete", supplier_subsystem_path(supplier_subsystem), :method => :delete, :confirm => "Are you sure want to delete supplier_subsystem?" %></td>	
+												</tr>
+										<% end %>
+								</tbody>
+						</table>
+				</div>
+		</div>
+<% end %>
