@@ -2,16 +2,22 @@
 		<ul>
 				<li class="<%= "active" if params[:controller] == "users" %>"><%= link_to "Users", users_path %></li>
 				<li class="<%= "active" if params[:controller] == "corrective_actions" %>"><%= link_to "Corrective Actions", corrective_actions_path %></li>
-				<li class="<%= "active" if params[:controller] == "groups" %>"><%= link_to "Problem Groups", groups_path %></li>
-				<li class="<%= "active" if params[:controller] == "categories" %>"><%= link_to "Categories", categories_path %></li>
-				<li class="<%= "active" if params[:controller] == "ca_types" %>"><%= link_to "Types", ca_types_path %></li>
-				<li class="<%= "active" if params[:controller] == "divisions" %>"><%= link_to "Divisions", divisions_path %></li>
-				<li class="<%= "active" if params[:controller] == "sources" %>"><%= link_to "Sources", sources_path %></li>
-				<li class="<%= "active" if params[:controller] == "ca_classes" %>"><%= link_to "Classes", ca_classes_path %></li>
-				<li class="<%= "active" if params[:controller] == "levels" %>"><%= link_to "Levels", levels_path %></li>
-				<li class="<%= "active" if params[:controller] == "programs" %>"><%= link_to "Programs", programs_path %></li>
-				<li class="<%= "active" if params[:controller] == "sub_programs" %>"><%= link_to "Sub-Programs", sub_programs_path %></li>
-				<li class="<%= "active" if params[:controller] == "customers" %>"><%= link_to "Customers", customer_subsystems_path %></li>
-				<li class="<%= "active" if params[:controller] == "suppliers" %>"><%= link_to "Suppliers", supplier_subsystems_path %></li>
+				
+				<li class="submenu <%= "active open" if %w(groups categories ca_types divisions sources ca_classes levels programs sub_programs customers suppliers).include?(params[:controller]) %>">
+						<a href="javascript: void(0);"><span>Keywords</span> <span class="label">11</span></a>
+						<ul>
+								<li class="<%= "active" if params[:controller] == "groups" %>"><%= link_to "Problem Groups", groups_path %></li>
+								<li class="<%= "active" if params[:controller] == "categories" %>"><%= link_to "Categories", categories_path %></li>
+								<li class="<%= "active" if params[:controller] == "ca_types" %>"><%= link_to "Types", ca_types_path %></li>
+								<li class="<%= "active" if params[:controller] == "divisions" %>"><%= link_to "Divisions", divisions_path %></li>
+								<li class="<%= "active" if params[:controller] == "sources" %>"><%= link_to "Sources", sources_path %></li>
+								<li class="<%= "active" if params[:controller] == "ca_classes" %>"><%= link_to "Classes", ca_classes_path %></li>
+								<li class="<%= "active" if params[:controller] == "levels" %>"><%= link_to "Levels", levels_path %></li>
+								<li class="<%= "active" if params[:controller] == "programs" %>"><%= link_to "Programs", programs_path %></li>
+								<li class="<%= "active" if params[:controller] == "sub_programs" %>"><%= link_to "Sub-Programs", sub_programs_path %></li>
+								<li class="<%= "active" if params[:controller] == "customers" %>"><%= link_to "Customers", customer_subsystems_path %></li>
+								<li class="<%= "active" if params[:controller] == "suppliers" %>"><%= link_to "Suppliers", supplier_subsystems_path %></li>
+						</ul>
+				</li>
 		</ul>
 </div>
