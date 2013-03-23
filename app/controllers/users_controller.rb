@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-		before_filter :record_exists, :only => [:edit, :update, :destroy]
+		before_filter :record_exists, :only => [:show, :edit, :update, :destroy]
 		def index
 				@users = User.all
 		end
@@ -17,6 +17,9 @@ class UsersController < ApplicationController
 						flash[:error] = "Error in creating user."
 						render 'new'
 				end
+		end
+		
+		def show
 		end
 		
 		def edit
