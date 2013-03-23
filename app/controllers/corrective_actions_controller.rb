@@ -1,5 +1,5 @@
 class CorrectiveActionsController < ApplicationController
-		before_filter :record_exists, :only => [:edit, :update, :destroy]
+		before_filter :record_exists, :only => [:show, :edit, :update, :destroy]
 		def index
 				@corrective_actions = CorrectiveAction.all
 		end
@@ -19,6 +19,9 @@ class CorrectiveActionsController < ApplicationController
 				@divisions = Division.all
 				@customer_subsystems = CustomerSubsystem.all
 				@supplier_subsystems = SupplierSubsystem.all
+		end
+		
+		def show
 		end
 		
 		def create

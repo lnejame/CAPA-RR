@@ -1,0 +1,88 @@
+<div class="create-link">View Corrective Action</div>
+
+<div class="main-container">
+		<div class="widget-box">
+				<h4>Corrective Action #<%= @corrective_action.id %></h4>
+				<table width="100%">
+						<tr>
+								<td width="30%">Group:</td><td width="70%"><%= @corrective_action.group && @corrective_action.group.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Subject:</td><td width="70%"><%= @corrective_action.subject %></td>
+						</tr>
+						<tr>
+								<td width="30%">Created User:</td><td width="70%"><%= @corrective_action.created_user && @corrective_action.created_user.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Responsible User:</td><td width="70%"><%= @corrective_action.responsible_user && @corrective_action.responsible_user.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Due Date:</td><td width="70%"><%= formatted_date(@corrective_action.due_date) %></td>
+						</tr>
+						<tr>
+								<td width="30%">Security Level:</td><td width="70%"><%= @corrective_action.security_level %></td>
+						</tr>
+						<tr>
+								<td width="30%">Location:</td><td width="70%"><%= @corrective_action.location %></td>
+						</tr>
+						<tr>
+								<td width="30%">Part:</td><td width="70%"><%= @corrective_action.part && @corrective_action.part.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Supplier:</td><td width="70%"><%= @corrective_action.supplier_subsystem && @corrective_action.supplier_subsystem.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Customer:</td><td width="70%"><%= @corrective_action.customer_subsystem && @corrective_action.customer_subsystem.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Category:</td><td width="70%"><%= @corrective_action.category && @corrective_action.category.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Type:</td><td width="70%"><%= @corrective_action.ca_type && @corrective_action.ca_type.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Division:</td><td width="70%"><%= @corrective_action.division && @corrective_action.division.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Department:</td><td width="70%"><%= @corrective_action.department %></td>
+						</tr>
+						<tr>
+								<td width="30%">Source:</td><td width="70%"><%= @corrective_action.source && @corrective_action.source.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Class:</td><td width="70%"><%= @corrective_action.ca_class && @corrective_action.ca_class.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Level:</td><td width="70%"><%= @corrective_action.level && @corrective_action.level.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Program:</td><td width="70%"><%= @corrective_action.program && @corrective_action.program.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">SubProgram:</td><td width="70%"><%= @corrective_action.sub_program && @corrective_action.sub_program.name %></td>
+						</tr>
+						<tr>
+								<td width="30%">Material Cost:</td><td width="70%"><%= @corrective_action.material_cost %></td>
+						</tr>
+						<tr>
+								<td width="30%">Labor Cost:</td><td width="70%"><%= @corrective_action.labor_cost %></td>
+						</tr>
+						<tr>
+								<td width="30%">Total Cost:</td><td width="70%"><%= @corrective_action.total_cost %></td>
+						</tr>
+						<tr>
+								<td width="30%">Size:</td><td width="70%"><%= @corrective_action.size %></td>
+						</tr>
+						<tr>
+								<td width="30%">Range:</td><td width="70%"><%= @corrective_action.range %></td>
+						</tr>
+						<tr>
+								<td width="30%">Scope:</td><td width="70%"><%= @corrective_action.scope %></td>
+						</tr>
+						<tr>
+								<td width="30%">CAR Description:</td><td width="70%"><%= @corrective_action.description %></td>
+						</tr>
+				</table>
+		</div>
+</div>
+
