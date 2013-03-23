@@ -22,6 +22,7 @@
 														<td><%= formatted_date(corrective_action.due_date) %></td>
 														<td><%= corrective_action.description %></td>
 														<td>
+																<%= link_to "View", corrective_action_path(corrective_action) %> | 
 																<%= link_to "Edit", edit_corrective_action_path(corrective_action) %> | 
 																<%= link_to "Delete", corrective_action_path(corrective_action), :method => :delete, :confirm => "Are you sure want to delete?" %>
 														</td>	
