@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: module_7d_dev
+  database: capa_rr_dev
   pool: 5
   username: postgres
   password: root
@@ -18,7 +18,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: module_7d_test
+  database: capa_rr_test
   pool: 5
   username: postgres
   password: root
@@ -27,8 +27,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: module_7d_prod
+  database: d4f64rasn917pv
   pool: 5
-  username: postgres
-  password: root
-  host: localhost
+  username: boovkjgycdwtdz
+  password: mFa2VbL50IoxxPDrqUoQQ9Sf1i
+  host: ec2-107-22-163-119.compute-1.amazonaws.com
